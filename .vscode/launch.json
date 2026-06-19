@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "test_open_day_demo",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/home/Feb/Documents/OpenDay_Demo/app.py",
+            "python": "/home/Feb/miniconda3/envs/gnd_dino+sam2_venv/bin/python",
+            "cwd": "/home/Feb/Documents/OpenDay_Demo",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+          },
+    ]
+}
