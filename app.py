@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLAUDE GENERATED CODE - HAVE NOT BEEN MANUALLLY DEBUG
+CLAUDE GENERATED CODE - Then manually validated by Feb
 
 VLM Object Detection & Tracking Demo
 Grounding DINO / Florence-2 + SAM2 — Gradio interface
