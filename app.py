@@ -187,7 +187,7 @@ def process_video(preset_name, custom_video, text_prompt, detector_choice,
 
     tmp_frames  = tempfile.mkdtemp(prefix="gsam2_frames_")
     tmp_results = tempfile.mkdtemp(prefix="gsam2_annot_")
-    out_path    = tempfile.mktemp(suffix="_out.mp4")
+    out_path    = tempfile.mkdtemp(suffix="_out.mp4")
 
     try:
         # ── 1. Extract frames ──────────────────────────────────────────────
