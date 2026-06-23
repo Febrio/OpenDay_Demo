@@ -29,18 +29,18 @@ SAM2_CHECKPOINT = os.path.join(GROUNDED_SAM2_DIR, "checkpoints/sam2.1_hiera_larg
 SAM2_CONFIG     = "configs/sam2.1/sam2.1_hiera_l.yaml"
 
 PRESET_VIDEOS = {
-    "🐟  Fish": os.path.join(SAMPLE_VID_DIR, "sample_videos/Fish.mp4"),
-    "🚗  Car Tracking":  os.path.join(SAMPLE_VID_DIR, "sample_videos/tracking_car.mp4"),
+    "🛹 Skateboard": os.path.join(SAMPLE_VID_DIR, "sample_videos/skateboard.mp4"),
+    "🐦 Bird":  os.path.join(SAMPLE_VID_DIR, "sample_videos/Bird.mp4"),
     "🦓  Zebra":         os.path.join(SAMPLE_VID_DIR, "sample_videos/zebra.mp4"),
     "🦖 Pocket Monsters":  os.path.join(SAMPLE_VID_DIR, "sample_videos/Pocket_Monsters.mp4"),
     "🧑‍💼 Office work": os.path.join(SAMPLE_VID_DIR, "sample_videos/Office_work.mp4"),
 }
 PRESET_DEFAULTS = {
-    "🐟  Fish": "fish",
-    "🚗  Car Tracking":  "car",
-    "🦓  Zebra":         "zebra",
+    "🛹  Skateboard"    : "skateboard",
+    "🐦  Bird"          : "bird",
+    "🦓  Zebra"         : "zebra",
     "🦖 Pocket Monsters": "Pokemon",
-    "🧑‍💼 Office work": "office",
+    "🧑‍💼 Office work" : "office",
 }
 
 # ── Global model cache (lazy-loaded on first use) ────────────────────────────
@@ -333,9 +333,9 @@ def build_ui():
                     # Left: controls
                     with gr.Column(scale=1, min_width=300):
                         gr.Markdown("### Video")
-                        preset_dd = gr.Dropdown(
+                        preset_dd = gr.Radio(
                             choices=list(PRESET_VIDEOS.keys()),
-                            value="🐟  Fish",
+                            value="🛹 Skateboard",
                             label="Preset video",
                         )
                         custom_vid = gr.Video(
@@ -401,7 +401,7 @@ def build_ui():
                 )
 
                 demo.load(
-                    fn=lambda: (PRESET_VIDEOS["🐟  Fish"], "fish"),
+                    fn=lambda: (PRESET_VIDEOS["🛹 Skateboard"], "skateboard"),
                     outputs=[input_display, text_box],
                 )
 
